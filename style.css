@@ -1,0 +1,172 @@
+/*cascading styling sheet*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+/* background color, margin and font style for body elements*/
+body {
+    background-color: #030303;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+
+/* styling on header element with ease in transition */
+header {
+    background-color: #363636;
+  /*The main idea behind the flex layout is to give the container the ability to alter its items’ width/height 
+  (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). */
+    display: flex;
+
+}
+
+/* styling on h1 element with ease in transition */
+h1{
+    color: whitesmoke;
+    align-self: center;
+    margin-left: 28rem;
+    text-align: center;
+    /*The linear-gradient() CSS function creates an image consisting of a progressive transition between two or 
+     more colors along a straight line.*/
+    background: linear-gradient(to right, #11aaff, #00ff9d);
+    opacity: 1;
+    padding: 20px;
+    transition: 200ms ease-in;
+  border-radius: 25px;
+    vertical-align: top;
+}
+
+
+/* styling on h1 element on hover state */
+
+h1:hover{
+  opacity:.4;
+}
+
+
+.wrapper{
+    max-width: 500px;
+    background: green;
+    height: 60px;
+    text-align: right;
+    color: Red;
+    align-self: center;
+    margin-left: 40rem;
+    text-align: center;
+    background: linear-gradient(to right, #00bbaa, #11ffff);
+    flex: 0 0 100%;
+}
+
+.marquee {
+    background: red;
+     height: 40px;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    align-self: center;
+    margin-left: 30rem;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-animation: leftThenRight 3s linear;
+}
+
+/* Styling for search toolbar */
+.search {
+    margin: 3rem;
+    margin-left: 12rem;
+    background-color: transparent;
+    border: 2px solid #e9e9ec;
+    border-radius: 50px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #050505;
+    outline: none;
+}
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: 265px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eeeeee;
+  /*The translateY() CSS function repositions an element 
+  vertically on the 2D plane. Its result is a <transform-function> data type. */
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.8rem;
+
+}
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    background-color: #ffffff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%); /*The translateY() CSS function repositions an element vertically on the 2D plane. Its result is a <transform-function> data type.*/
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
